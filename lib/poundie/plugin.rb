@@ -27,7 +27,12 @@ module Poundie
 
     def call(message)
       message = Poundie::Campfire::Message.new(message)
-      match?(message) && perform(message)
+      begin
+        match?(message) && perform(message)
+      rescue => e
+        puts "ERROR: #{e.message}"
+        raise e
+      end
     end
 
     private
