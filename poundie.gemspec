@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.require_paths = [%q{lib}]
   s.rubygems_version = %q{1.8.0}
   s.summary = %q{A campfire bot}
+  s.description = "Uses plugins to interact with campfire rooms"
   s.add_dependency("tinder")
   s.add_dependency("typhoeus")
 end
