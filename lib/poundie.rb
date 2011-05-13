@@ -3,6 +3,8 @@ $LOAD_PATH << File.dirname(__FILE__)
 require "tinder"
 require "yaml"
 require "readline"
+require "typhoeus"
+require "json"
 
 require "poundie/runner"
 require "poundie/plugin"

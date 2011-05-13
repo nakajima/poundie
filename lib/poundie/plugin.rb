@@ -32,6 +32,14 @@ module Poundie
 
     private
 
+    def get(url, params={})
+      Typhoeus::Request.get(url, params).body
+    end
+
+    def post(url, params={})
+      Typhoeus::Request.post(url, params).body
+    end
+
     def speak(msg)
       @room.speak(msg)
     end

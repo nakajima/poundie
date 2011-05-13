@@ -22,9 +22,13 @@ GEM
     twitter-stream (0.1.13)
       eventmachine (~> 0.12.8)
       simple_oauth (~> 0.1.4)
+    typhoeus (0.2.3)
+      mime-types
+      mime-types
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   tinder
+  typhoeus
