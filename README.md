@@ -54,3 +54,7 @@ What can you do in the `action`?
     paste "Some long text"
 
 That's about it for now.
+
+## Available Plugins
+
+* [poundie-last-tweet](https://github.com/nakajima/poundie-last-tweet) - Posts the last tweet from a given Twitter user to campfire
