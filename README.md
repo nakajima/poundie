@@ -1,4 +1,4 @@
--# POUNDIE #-
+# POUNDIE
 
 Poundie is a Campfire bot.
 
