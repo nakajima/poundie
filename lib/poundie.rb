@@ -11,6 +11,7 @@ require "poundie/plugin"
 require "poundie/campfire/user"
 require "poundie/campfire/message"
 require "poundie/plugins/greeter"
+require "poundie/plugins/debug"
 
 trap('INT') { puts "ok bye!" ; exit! }
 
