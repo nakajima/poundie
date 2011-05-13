@@ -46,3 +46,11 @@ Pretty easy! The message that gets passed to `match` and `action` is:
     message.user.email # email address of the user
     message.user.admin? # is the user an admin?
     message.user.created_at # when the user was created
+
+What can you do in the `action`?
+
+    speak "Some text"
+    tweet "https://twitter.com/steve_martocci/status/69140542038097921"
+    paste "Some long text"
+
+That's about it for now.
