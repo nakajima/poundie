@@ -1,3 +1,4 @@
+$VERBOSE = nil # screw "warning: peer certificate won't be verified in this SSL session"
 $LOAD_PATH << File.dirname(__FILE__)
 
 require "tinder"
