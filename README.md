@@ -58,3 +58,4 @@ That's about it for now.
 ## Available Plugins
 
 * [poundie-last-tweet](https://github.com/nakajima/poundie-last-tweet) - Posts the last tweet from a given Twitter user to campfire
+* [poundie-weather](https://github.com/nakajima/poundie-weather) - Posts weather information for a given city to campfire
