@@ -21,6 +21,16 @@ module Poundie
       define_method(:perform, &block)
     end
 
+    def self.prefix(regex, &block)
+      match do |message|
+        message.body =~ regex
+      end
+
+      action do |message|
+        instance_exec(message.body.gsub(regex, ''), &block)
+      end
+    end
+
     def initialize(room)
       @room = room
     end
