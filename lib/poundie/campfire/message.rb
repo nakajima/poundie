@@ -1,8 +1,8 @@
 module Poundie
   module Campfire
     class Message
-      def initialize(hash)
-        @hash = hash
+      def initialize(room, hash)
+        @room, @hash = room, hash
       end
 
       def id
@@ -22,7 +22,7 @@ module Poundie
       end
 
       def user
-        Poundie::Campfire::User.new(@hash[:user])
+        Poundie::Campfire::User.get(@room, @hash[:user_id])
       end
 
       def type

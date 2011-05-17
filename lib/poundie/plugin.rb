@@ -36,11 +36,12 @@ module Poundie
     end
 
     def call(message)
-      message = Poundie::Campfire::Message.new(message)
+      message = Poundie::Campfire::Message.new(@room, message)
       begin
         match?(message) && perform(message)
       rescue => e
         puts "ERROR: #{e.message}"
+        puts "       #{e.backtrace.join("\n")}"
         raise e
       end
     end

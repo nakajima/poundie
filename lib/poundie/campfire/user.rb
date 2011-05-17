@@ -1,6 +1,17 @@
 module Poundie
   module Campfire
     class User
+      def self.get(room, user_id)
+        cache[user_id] || begin
+          json = room.users.detect { |u| u["id"] == user_id }
+          cache[user_id] = Poundie::Campfire::User.new(json)
+        end
+      end
+
+      def self.cache
+        @cache ||= {}
+      end
+
       def initialize(hash)
         @hash = hash
       end

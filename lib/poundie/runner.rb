@@ -12,7 +12,6 @@ module Poundie
       puts "Starting stream: #{url.inspect}"
       Yajl::HttpStream.get(url, :symbolize_keys => true) do |message|
         Thread.new do
-          puts "checking: #{message.inspect}"
           plugins.each { |plugin| plugin.call(message) }
         end
       end
