@@ -14,6 +14,9 @@ module Poundie
           plugins.each { |plugin| plugin.call(message) }
         end
       end
+      puts "Connection lost. Reconnecting..."
+      sleep 3
+      run
     end
 
     private
