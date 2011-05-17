@@ -10,10 +10,11 @@ module Poundie
     def run
       url = URI.parse("http://#{@token}:x@streaming.campfirenow.com//room/#{room.id}/live.json")
       puts "Starting stream: #{url.inspect}"
-      Yajl::HttpStream.get(url) do |message|
-        # puts "GOT A MESSAGE: #{message}"
-        # plugins.each { |plugin| plugin.call(line) }
-        puts message.inspect
+      Yajl::HttpStream.get(url, :symbolize_keys => true) do |message|
+        Thread.new do
+          puts "checking: #{message.inspect}"
+          plugins.each { |plugin| plugin.call(message) }
+        end
       end
     end
 
