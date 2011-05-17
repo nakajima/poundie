@@ -13,4 +13,5 @@ Gem::Specification.new do |s|
   s.description = "Uses plugins to interact with campfire rooms"
   s.add_dependency("tinder")
   s.add_dependency("typhoeus")
+  s.add_dependency("yajl-ruby")
 end
