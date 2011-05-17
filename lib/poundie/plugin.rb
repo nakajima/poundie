@@ -37,6 +37,7 @@ module Poundie
 
     def call(message)
       message = Poundie::Campfire::Message.new(@room, message)
+      return if message.timestamp?
       begin
         match?(message) && perform(message)
       rescue => e

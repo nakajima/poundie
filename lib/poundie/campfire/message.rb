@@ -44,6 +44,10 @@ module Poundie
       def tweet?
         type == "TweetMessage"
       end
+
+      def timestamp?
+        type == "TimestampMessage"
+      end
     end
   end
 end
