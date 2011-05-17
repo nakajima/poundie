@@ -42,7 +42,7 @@ module Poundie
         match?(message) && perform(message)
       rescue => e
         puts "ERROR: #{e.message}"
-        puts "       #{e.backtrace.join("\n")}"
+        puts e.backtrace.join("\n")
         raise e
       end
     end
