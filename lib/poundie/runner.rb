@@ -8,9 +8,8 @@ module Poundie
     end
 
     def run
-      url = URI.parse("http://#{@token}:x@streaming.campfirenow.com//room/#{room.id}/live.json")
-      puts "Starting stream: #{url.inspect}"
-      Yajl::HttpStream.get(url, :symbolize_keys => true) do |message|
+      room.join # We need to make sure we're in the room first
+      Yajl::HttpStream.get(room_uri, :symbolize_keys => true) do |message|
         Thread.new do
           plugins.each { |plugin| plugin.call(message) }
         end
@@ -23,6 +22,10 @@ module Poundie
       @plugins ||= Poundie::Plugin.active.map do |plugin|
         plugin.new(room)
       end
+    end
+
+    def room_uri
+      URI.parse("http://#{@token}:x@streaming.campfirenow.com//room/#{room.id}/live.json")
     end
 
     def room
