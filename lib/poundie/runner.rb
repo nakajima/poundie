@@ -8,13 +8,12 @@ module Poundie
     end
 
     def run
-      trap('INT') { exit! }
-      room.listen do |line|
-        Thread.new do
-          plugins.each { |plugin|
-            plugin.call(line)
-          }
-        end
+      url = URI.parse("http://#{@token}:x@streaming.campfirenow.com//room/#{room.id}/live.json")
+      puts "Starting stream: #{url.inspect}"
+      Yajl::HttpStream.get(url) do |message|
+        # puts "GOT A MESSAGE: #{message}"
+        # plugins.each { |plugin| plugin.call(line) }
+        puts message.inspect
       end
     end
 

@@ -6,6 +6,8 @@ require "yaml"
 require "readline"
 require "typhoeus"
 require "json"
+require "uri"
+require "yajl/http_stream"
 
 require "poundie/runner"
 require "poundie/plugin"
@@ -13,8 +15,6 @@ require "poundie/campfire/user"
 require "poundie/campfire/message"
 require "poundie/plugins/greeter"
 require "poundie/plugins/debug"
-
-trap('INT') { puts "ok bye!" ; exit! }
 
 module Poundie
   def self.start(name="default")
