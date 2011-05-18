@@ -15,6 +15,7 @@ require "poundie/campfire/user"
 require "poundie/campfire/message"
 require "poundie/plugins/greeter"
 require "poundie/plugins/debug"
+require "poundie/plugins/help"
 
 module Poundie
   def self.start(name="default")
@@ -28,3 +29,6 @@ module Poundie
     Poundie::Plugin.active << Poundie::Plugin.list[plugin]
   end
 end
+
+# We always want to use help
+Poundie.use :help

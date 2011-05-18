@@ -8,9 +8,14 @@ module Poundie
       @active ||= []
     end
 
-    def self.register(name)
+    def self.register(name, usage=nil)
       puts "Registering #{name}: #{self}"
       Poundie::Plugin.list[name] = self
+      Poundie::Plugin.help << usage if usage
+    end
+
+    def self.help
+      @help ||= []
     end
 
     def self.match(&block)
