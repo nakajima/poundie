@@ -62,3 +62,4 @@ That's about it for now.
 * [poundie-wikipedia](https://github.com/nakajima/poundie-wikipedia) - Search wikipedia from campfire
 * [poundie-pic](https://github.com/nakajima/poundie-pic) - Post first google image result for a given term to campfire
 * [poundie-shake-shack](https://github.com/nakajima/poundie-shake-shack) - Post latest shake shack cam to campfire
+* [poundie-wozzeck](https://github.com/mrhaddad/poundie-wozzeck) - Post random atonal musical accompaniment to provided lyrics
