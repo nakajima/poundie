@@ -48,6 +48,42 @@ module Poundie
       def timestamp?
         type == "TimestampMessage"
       end
+
+      def advertisement?
+        type == "AdvertisementMessage"
+      end
+
+      def idle?
+        type == "IdleMessage"
+      end
+
+      def kick?
+        type == "KickMessage"
+      end
+
+      def leave?
+        type == "LeaveMessage"
+      end
+
+      def system?
+        type == "SystemMessage"
+      end
+
+      def topic_change?
+        type == "TopicChangeMessage"
+      end
+
+      def unidle?
+        type == "UnidleMessage"
+      end
+
+      def unlock?
+        type == "UnlockMessage"
+      end
+
+      def upload?
+        type == "UploadMessage"
+      end
     end
   end
 end
