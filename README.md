@@ -61,3 +61,4 @@ That's about it for now.
 * [poundie-weather](https://github.com/nakajima/poundie-weather) - Posts weather information for a given city to campfire
 * [poundie-wikipedia](https://github.com/nakajima/poundie-wikipedia) - Search wikipedia from campfire
 * [poundie-pic](https://github.com/nakajima/poundie-pic) - Post first google image result for a given term to campfire
+* [poundie-shake-shack](https://github.com/nakajima/poundie-shake-shack) - Post latest shake shack cam to campfire
