@@ -63,3 +63,4 @@ That's about it for now.
 * [poundie-pic](https://github.com/nakajima/poundie-pic) - Post first google image result for a given term to campfire
 * [poundie-shake-shack](https://github.com/nakajima/poundie-shake-shack) - Post latest shake shack cam to campfire
 * [poundie-wozzeck](https://github.com/mrhaddad/poundie-wozzeck) - Post random atonal musical accompaniment to provided lyrics
+* [poundie-ffm](https://github.com/mrhaddad/poundie-ffm) - Post antipodal restaurant to provided location
