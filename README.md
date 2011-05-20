@@ -64,3 +64,4 @@ That's about it for now.
 * [poundie-shake-shack](https://github.com/nakajima/poundie-shake-shack) - Post latest shake shack cam to campfire
 * [poundie-wozzeck](https://github.com/mrhaddad/poundie-wozzeck) - Post random atonal musical accompaniment to provided lyrics
 * [poundie-ffm](https://github.com/mrhaddad/poundie-ffm) - Post antipodal restaurant to provided location
+* [poundie-urban-dictionary](https://github.com/nakajima/poundie-urban-dictionary) - A Poundie plugin for posting urban dictionary definitions to campfire
